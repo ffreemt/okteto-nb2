@@ -15,6 +15,7 @@ logzero = "^1.7.0"
 nonebot2 = "^2.0.0-alpha.16"
 nonebot-adapter-cqhttp = "^2.0.0-alpha.16"
 aiocqhttp = "^1.4.2"
+pendulum = "^2.1.2"
 
 [tool.poe.executor]
 type = "poetry"
