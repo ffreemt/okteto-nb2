@@ -1,0 +1,13 @@
+# okteto login && okteto namespace && okteto stack deploy - build
+name: bot
+services:
+  bot:
+    public: true
+    image: okteto.dev/okteto-nb
+    build: .
+    replicas: 1
+    ports:
+      - 8680
+    resources:
+      cpu: 1000m
+      memory: 3Gi
