@@ -46,7 +46,7 @@ Run/test/develop plugins for nonebot2 + cqhttp in `okteto`, agilely
     curl 127.0.0.1:8680
     # {"success":"Hello nb2chan! "}
 
-    curl "127.0.0.1:8680/nb2chan/?Token=DEMO_TOKEN&qq=1234msg=okteto-msg"
+    curl "127.0.0.1:8680/nb2chan/?Token=DEMO_TOKEN&qq=1234&msg=okteto-msg"
 
     # {"error":"okteto-nb2-55d5d887cb-2p6r5 exc: <NetWorkError message=WebSocket API call timeout>, (大佬这个qq号[1234]加机器人好友了吗？ 没加的话用不了nb2酱。)"}
     ```
