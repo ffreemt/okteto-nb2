@@ -20,7 +20,7 @@ Run/test/develop plugins for nonebot2 + cqhttp in `okteto`, agilely
     ```
 *   login to 登录 `okteto`
     ```bash
-    docker login  # needed for the whole thing to work
+    # docker login  # not readll needed for the whole thing to work
     okteto login
     ```
 *   run 运行 `okteto up`
