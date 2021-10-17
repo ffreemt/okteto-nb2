@@ -147,3 +147,9 @@ yc-token
 go-cqhttp\config.yml
 go-cqhttp\data
 go-cqhttp/logs
+go-cqhttp/config.yml
+go-cqhttp/config.hjson
+go-cqhttp/device.json
+go-cqhttp/go-cqhttp
+go-cqhttp/go-cqhttp_linux_amd64.tar.gz
+go-cqhttp/session.token
