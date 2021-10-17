@@ -141,11 +141,7 @@ cython_debug/
 links/
 # .gitignore
 node_modules
-go-cqhttp\config.hjson
-go-cqhttp\device.json
 yc-token
-go-cqhttp\config.yml
-go-cqhttp\data
 go-cqhttp/logs
 go-cqhttp/config.yml
 go-cqhttp/config.hjson
