@@ -144,3 +144,4 @@ node_modulesgo-cqhttp\config.hjson
 go-cqhttp\device.json
 yc-token
 go-cqhttp
+go-cqhttp\config.yml

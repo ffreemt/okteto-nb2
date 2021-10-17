@@ -47,12 +47,11 @@ driver.register_adapter("cqhttp", CQHTTPBot)
 nonebot.load_builtin_plugins()
 # @bot /echo 000
 
-nonebot.load_plugin("nonebot_plugin_guess")
-nonebot.load_from_toml("pyproject.toml")
+# nonebot.load_from_toml("pyproject.toml")
 
 # 加载插件目录，该目录下为各插件，以下划线开头的插件将不会被加载
 # does not seem to load, return set()
-nonebot.load_plugins("okteto_nb2/plugins")
+# nonebot.load_plugins("okteto_nb2/plugins")
 
 # load plugin installed via pip install, order matters
 # nonebot.load_plugin("nonebot_plugin_autohelp")
@@ -67,5 +66,5 @@ app = nonebot.get_asgi()
 
 if __name__ == "__main__":
     # nonebot.logger.warning("Always use `nb run` to start the bot instead of manually running!")
-    nonebot.run(app="__mp__main__:app")
-    # nonebot.run(app="bot:app")
+    # nonebot.run(app="__mp__main__:app")
+    nonebot.run(app="bot:app")

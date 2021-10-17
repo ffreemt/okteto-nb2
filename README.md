@@ -15,7 +15,7 @@ Run/test/develop plugins for nonebot2 + cqhttp in `okteto`, agilely
     cd go-cqhttp
     # 下载 `go-cqhttp`
     # 例如 wget -c https://github.com/Mrs4s/go-cqhttp/releases/download/v1.0.0-beta7-fix2/go-cqhttp_linux_amd64.tar.gz && tar fvzx go-cqhttp_linux_amd64.tar.gz go-cqhttp
-    # 设置 `config.hjson` (参看`config.hjson-`) 和生成 `device.json` (参看`go-cqhttp`文档及 https://github.com/Mrs4s/go-cqhttp/blob/master/docs/slider.md）
+    # 设置 `config.yml` (参看`config.yml-`) 和生成 `device.json` (参看`go-cqhttp`文档及 https://github.com/Mrs4s/go-cqhttp/blob/master/docs/slider.md）
     ```
 *   login to 登录 `okteto`
     ```bash
@@ -26,6 +26,28 @@ Run/test/develop plugins for nonebot2 + cqhttp in `okteto`, agilely
     ```bash
     cd okteto-nb2
     okteto up
+    ```
+    enter 进入 `okteto`， run 运行
+    ```bash
+    app> apt-get install -y supervisor
+    app> supervisord -c gocqhttp.conf  # start go-cqhttp
+
+    app> pip install poetry --disable-pip-version-check && poetry install --no-dev --no-interaction --no-ansi  # install packages
+    app> poetry run python bot.py
+    # or poetry run uvicorn --host 0.0.0.0 --port 8680 bot:app --reload --reload-dir okteto_nb2
+
+    ...[INFO] nonebot | WebSocket Connection from CQHTTP Bot 2129462094 Accepted!
+    INFO:     connection open
+    ```
+
+    检测是否正常运行: 本机另开终端运行
+    ```
+    curl 127.0.0.1:8680
+    # {"success":"Hello nb2chan! "}
+
+    curl "127.0.0.1:8680/nb2chan/?Token=DEMO_TOKEN&qq=1234msg=okteto-msg"
+
+    # {"error":"okteto-nb2-55d5d887cb-2p6r5 exc: <NetWorkError message=WebSocket API call timeout>, (大佬这个qq号[1234]加机器人好友了吗？ 没加的话用不了nb2酱。)"}
     ```
 
     Happy coding……快乐地码码……
