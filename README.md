@@ -25,7 +25,7 @@ Run/test/develop plugins for nonebot2 + cqhttp in `okteto`, agilely
     ```
 *   run 运行 `okteto up`
     ```bash
-    cd .. && cd okteto-nb2
+    cd ..  # cd okteto-nb2
     okteto up
     ```
     enter 进入 `okteto`， run 运行
