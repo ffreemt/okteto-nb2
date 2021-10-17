@@ -12,7 +12,8 @@ Run/test/develop plugins for nonebot2 + cqhttp in `okteto`, agilely
 ## Use it
 *   setup 设置`go-cqhttp`
     ```bash
-    cd go-cqhttp
+    git clone https://github.com/ffreemt/okteto-nb2.git
+    cd okteto-nb2 && cd go-cqhttp
     # 下载 `go-cqhttp`
     # 例如 wget -c https://github.com/Mrs4s/go-cqhttp/releases/download/v1.0.0-beta7-fix2/go-cqhttp_linux_amd64.tar.gz && tar fvzx go-cqhttp_linux_amd64.tar.gz go-cqhttp
     # 设置 `config.yml` (参看`config.yml-`) 和生成 `device.json` (参看`go-cqhttp`文档及 https://github.com/Mrs4s/go-cqhttp/blob/master/docs/slider.md）
@@ -22,9 +23,9 @@ Run/test/develop plugins for nonebot2 + cqhttp in `okteto`, agilely
     docker login  # needed for the whole thing to work
     okteto login
     ```
-*   run 运行
+*   run 运行 `okteto up`
     ```bash
-    cd okteto-nb2
+    cd .. && cd okteto-nb2
     okteto up
     ```
     enter 进入 `okteto`， run 运行
