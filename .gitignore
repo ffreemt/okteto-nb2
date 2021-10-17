@@ -140,8 +140,10 @@ cython_debug/
 *.swp
 links/
 # .gitignore
-node_modulesgo-cqhttp\config.hjson
+node_modules
+go-cqhttp\config.hjson
 go-cqhttp\device.json
 yc-token
-go-cqhttp
 go-cqhttp\config.yml
+go-cqhttp\data
+go-cqhttp/logs
